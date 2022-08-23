@@ -25,8 +25,7 @@
           .container {
             width: 100%;
             height: 100vh;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            color: #fff;
+             color: #fff;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -37,7 +36,18 @@
             height: 500px;
             perspective: 1000px;
           }
-          
+          .submit-btn2{
+            padding: 4%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #d8b907;
+            font-size: 150%;
+          }
+          .submit-btn2:hover{
+            background-color:black;
+            transition: 2s;
+          }
           .inner-box {
             position: relative;
             width: 100%;
@@ -135,12 +145,7 @@
             right: -1px;
             top: -1px;
           }
-          
-          span {
-            font-size: 13px;
-            margin-left: 10px;
-          }
-          
+
           .btn .card {
             margin-top: 70px;
           }
@@ -180,8 +185,7 @@
             padding-top: 1%;
             text-align: center;
           }
-         
-
+          
     </style>
 
     <body>
@@ -196,30 +200,23 @@
             </div>
             <div class="card-back">
               <h2>Enter Destination</h2>
-              <form>
+              <button  class="submit-btn" onClick="onOpenHandler()">Measure Distance</button>
                 <input
                   type="number"
                   class="input-box"
-                  placeholder="From"
+                  placeholder="Total Distance"
                   id="from"
                   required
                 />
-
-                <input
-                  type="number"
-                  id="to"
-                  class="input-box"
-                  required
-                  placeholder="To"
-                />
-                <button type="submit" class="submit-btn" onclick="calculate()">Check Fare</button>
+               
+                <button type="submit" class="submit-btn2" onclick="calculate()">Check Fare</button>
                 
                 <div id="display"> </div>
                 <div id="price">
                   ( Rs. 5/km  
                   for the first 10km, Rs2/km for the next 20, and Rs1/km after that )
                 </div>   
-              </form>
+              
 
             </div>
           </div>
@@ -233,29 +230,21 @@
         }
         //////////////////////
         function calculate(){
-          let from = Number(document.get.getElementById('from').value);
-        let to = Number(document.get.getElementById('to').value);
-        let totalDistance = (from + to);
-        let tempFare = 1;
-        let fare = (totalDistance * tempFare);
-        console.log(fare);
-        let displayResult = document.getElementById('display') = fare;
-        if(from || to == ""){
-          alert("Enter The details")
+          let totalRoute = document.getElementById('from').value;
+          let display = document.getElementById('display');
+          
+
         }
-          if(totalDistance <=10)
-          {
-            tempFare = 5;
-          }
-          else if( totalDistance >= 10 && totalDistance <= 20)
-          {
-            tempFare = 2;
-          }
-          else{
-            tempFare = 1;
-          }
-        }
-        
+         /////////////////
+         //window
+         let input;
+            function onOpenHandler(){
+               input = window.open('https://www.google.com/maps','_blank','width=800px,height=400px,left=100px,top=100px');
+            }
+            function onCloseHandler(){
+                  input.close();
+            }
+
       </script>
     </body>
   </html>
