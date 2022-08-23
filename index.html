@@ -185,6 +185,11 @@
             padding-top: 1%;
             text-align: center;
           }
+          #display{
+            color: #d8b907;
+            font-size: 50px;
+            text-align: center;
+          }
           
     </style>
 
@@ -212,10 +217,7 @@
                 <button type="submit" class="submit-btn2" onclick="calculate()">Check Fare</button>
                 
                 <div id="display"> </div>
-                <div id="price">
-                  ( Rs. 5/km  
-                  for the first 10km, Rs2/km for the next 20, and Rs1/km after that )
-                </div>   
+                <div id="price"> </div>   
               
 
             </div>
@@ -230,10 +232,27 @@
         }
         //////////////////////
         function calculate(){
+          let showRate = "Rs. 5/km for the first 10km, Rs2/km for the next 20, and Rs1/km after that";
+          let price = document.getElementById('price');
           let totalRoute = document.getElementById('from').value;
+          parseInt(totalRoute)
           let display = document.getElementById('display');
-          
-
+          let RateReason = document.getElementById('price');
+          RateReason.innerHTML = "Rs. 5/km for the first 10km, Rs2/km for the next 20, and Rs1/km after that";
+          let kmFare = 1;
+          if(totalRoute <=0)
+          return;
+          else if(totalRoute <=10){
+            kmFare = 5;
+          }
+          else if(totalRoute <=20){
+            kmFare = 5;
+          }
+          else{
+            kmFare = 1;
+          }
+          let totalFare = (totalRoute*kmFare);
+          display.innerHTML =totalFare +" Rs.";
         }
          /////////////////
          //window
