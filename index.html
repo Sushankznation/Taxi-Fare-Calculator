@@ -196,9 +196,9 @@
             </div>
             <div class="card-back">
               <h2>Enter Destination</h2>
-              <form>
+              <form name="myForm">
                 <input
-                  type="text"
+                  type="number"
                   class="input-box"
                   placeholder="From"
                   id="from"
@@ -206,17 +206,15 @@
                 />
 
                 <input
-                  type="text"
+                  type="number"
                   id="to"
                   class="input-box"
                   required
                   placeholder="To"
                 />
-                <button type="submit" 
-                class="submit-btn"
-                 onclick="calculate()">Check Fare</button>
+                <button type="button" class="submit-btn" onclick="calculate()">Check Fare</button>
                 <!-- <textarea name="" id="textarea" cols="30" rows="1" ></textarea> -->
-                <div id="display"> Hello</div>
+                <div id="display"> </div>
                 <div id="price">
                   ( Rs. 5/km  
                   for the first 10km, Rs2/km for the next 20, and Rs1/km after that )
@@ -228,10 +226,6 @@
         </div>
       </div>
       <script>
-        var card = document.getElementById("card");
-        var from = Number(document.get.getElementById('from').value);
-        var to = Number(document.get.getElementById('to').value);
-        var displayResult = document.getElementById('display').innerHTML= "Hello";
         var totalRoute = (from+to);
 
         function openRegister() {
@@ -239,11 +233,22 @@
         }
         //////////////////////
         function calculate(){
-          if(totalRoute <=10){
-            displayResult.innerHTML = "hello";
+          let from = Number(document.get.getElementById('from').value);
+        let to = Number(document.get.getElementById('to').value);
+        let totalDistance = (from + to);
+        let tempFare = 1;
+        let fare = (totalDistance * tempFare);
+        let displayResult = document.getElementById('display') = fare;
+          if(totalDistance <=10)
+          {
+            tempFare = 5;
+          }
+          else if( totalDistance >= 10 && totalDistance <= 20)
+          {
+            tempFare = 2;
           }
           else{
-            displayResult.innerHTML = "Hello";
+            tempFare = 1;
           }
         }
         
