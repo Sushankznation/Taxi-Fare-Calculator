@@ -196,7 +196,7 @@
             </div>
             <div class="card-back">
               <h2>Enter Destination</h2>
-              <form name="myForm">
+              <form>
                 <input
                   type="number"
                   class="input-box"
@@ -212,8 +212,8 @@
                   required
                   placeholder="To"
                 />
-                <button type="button" class="submit-btn" onclick="calculate()">Check Fare</button>
-                <!-- <textarea name="" id="textarea" cols="30" rows="1" ></textarea> -->
+                <button type="submit" class="submit-btn" onclick="calculate()">Check Fare</button>
+                
                 <div id="display"> </div>
                 <div id="price">
                   ( Rs. 5/km  
@@ -238,7 +238,11 @@
         let totalDistance = (from + to);
         let tempFare = 1;
         let fare = (totalDistance * tempFare);
+        console.log(fare);
         let displayResult = document.getElementById('display') = fare;
+        if(from || to == ""){
+          alert("Enter The details")
+        }
           if(totalDistance <=10)
           {
             tempFare = 5;
