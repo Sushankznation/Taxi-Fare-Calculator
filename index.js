@@ -8,21 +8,19 @@
     parseInt(totalRoute)
  let RateReason = document.getElementById('price');
     // RateReason.innerHTML = "Rs. 5/km for the first 10km, Rs2/km for the next 20, and Rs1/km after that";
-    let kmFare = 1;
-    if(totalRoute <=0)
-    return;
-    else if(totalRoute <=10){
-      kmFare = 5;
+    // let kmFare = 1;
+    let totalFare;
+    if(totalRoute <=10){
+      totalFare = totalRoute*5;
     }
-     else if(totalRoute <=20){
-      kmFare = 2;
+     else if((totalRoute > 10 && totalRoute <= 20)){
+      totalFare = (totalRoute - 10) * 2 + 10 * 5;
     }
-    else{
-      kmFare = 1;
+    else if (totalRoute >20){
+      totalFare = (totalRoute - 20) + 10 * 2 + 10 * 5;
     }
-    let totalFare = (totalRoute*kmFare);
-    // display.innerHTML = totalFare +" Rs.";
-    let display = document.getElementById('display').innerHTML = totalFare+"Rs.";
+    // let totalFare = (totalRoute*kmFare);
+    let display = document.getElementById('display').innerHTML = totalFare+" Rs.";
     
   
   }
