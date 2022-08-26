@@ -7,6 +7,13 @@
       <link rel="stylesheet" href="/src/styles.css" />
       <title>Calculate-Taxi-Fare</title>
       <link rel="stylesheet" href="styles.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script
+        defer
+        src="https://maps.googleapis.com/maps/api/js?libraries=places&language=en&key= AIzaSyD51OcSUK4f64fv3yoiVhaMECtf1L6gItU"
+        type="text/javascript"
+      ></script>
+    </head>
     </head>
     <body>
       <div class="container">
@@ -14,25 +21,56 @@
           <div class="inner-box" id="card">
             <div class="card-front">
               <h2 id="h2">Get Your Taxi Fare now!</h2>
-              <button type="button" class="btn" onclick="openRegister()">
+              <button type="button" class="btn1" onclick="openRegister()">
                 Calculate Now
               </button>
             </div>
             <div class="card-back">
               <h2>Enter Destination</h2>
-              <button  class="submit-btn" onClick="onOpenHandler()">Measure Distance</button>
-                <input
-                  type="number"
-                  class="input-box"
-                  placeholder="Total Distance"
-                  id="from"
-                  required
-                />
-               
+              <!-- YT-Content////////////////// -->
+              <!-- <div class="container"> -->
+                <div class="row">
+                  <div class="jumbotron">
+                    <!-- <h1>Calculate the Distance Between two Addresses demo</h1> -->
+                  </div>
+                    <form id="distance_form">
+                      <div class="form-group">
+                        <label>Origin: </label>
+                        <input
+                          class="form-control"
+                          id="from_places"
+                          placeholder="Enter a location"
+                        />
+                        <input id="origin" name="origin" required="" type="hidden" />
+                      </div>
+           
+                      <div class="form-group">
+                        <label>Destination: </label>
+                        <input
+                          class="form-control"
+                          id="to_places"
+                          placeholder="Enter a location"
+                        />
+                        <input
+                          id="destination"
+                          name="destination"
+                          required=""
+                          type="hidden"
+                        />
+                      </div>
+                      <button class="btn btn-primary" type="submit" value="Calculate"> Calculate Total Distance</button> 
+                    </form>
+                    <label for="kilo">Total Distance in KM:</label>
+                        <textarea name="textare" id="kilo" cols="10" class="
+                        list-group-item rows="5" disabled> </textarea>
+          
+                      </ul>
+                    </div>
                 <button type="submit" class="submit-btn2" onclick="calculate()">Check Fare</button>
                 
                 <div id="display"> </div>
-                <div id="price"> </div>   
+                <!-- <div id="price"> </div>   -->
+              </div> 
             </div>
           </div>
         </div>
