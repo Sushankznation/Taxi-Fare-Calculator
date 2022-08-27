@@ -201,4 +201,32 @@
     text-align: center;
     font-weight:bold;
   }
+  /* //////////////////////// */
+  @media screen and (max-width: 991px) {
+    .container
+    {
+      width: 100%;
+    height: 100%;
+  }
+  .card-front,
+  .card-back 
+  {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    background-position: center;
+    background-color: black;
+    padding: 15%;
+    padding-top: 15%;
+    display: flexbox;
+    align-items:center;
+    justify-content: center;
+    border: 2px solid rgb(214, 231, 61);
+    border-radius: 50px 20px;
+    box-sizing: border-box;
+    backface-visibility: hidden;
+    
+  }
+}
  
