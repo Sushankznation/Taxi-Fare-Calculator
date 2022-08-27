@@ -235,8 +235,8 @@
   }
   body{
     background-image: url("/wp1898158-taxi-wallpapers.jpg");
-    height: 100%;
-    width: auto;
+    height: 90vh;
+    width: 100%;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
