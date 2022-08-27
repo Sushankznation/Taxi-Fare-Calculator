@@ -9,7 +9,9 @@
 ------------
 
 ## Discription 🤙
-- This is a Taxi fare calculater. which will give you 
+- This is a Taxi fare calculater. which take the destination and sources as input from the user and give the fare
+  nased on the distance between places.
+- Fare Details : Rs 5/km for first 10 KM, Rs. 2/km for the next 20, and Rs 1/Km after that.
 
 ------------
 
