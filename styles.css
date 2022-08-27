@@ -58,7 +58,7 @@
     background-position: center;
     background-color: black;
     padding: 15%;
-    padding-top: 15%;
+    padding-top: 20%;
     display: flexbox;
     align-items:center;
     justify-content: center;
@@ -72,7 +72,7 @@
   .card-back {
     transform: rotateY(180deg);
     padding: 15%;
-    padding-top: 10%;
+    padding-top: 0%;
   }
   
   .card h2 {
@@ -212,13 +212,13 @@
   .card-back 
   {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 400px;
+    height: 500px;
     opacity: 0.8;
     background-position: center;
     background-color: black;
-    padding: 15%;
-    padding-top: 15%;
+    padding: 20%;
+    padding-top: 0%;
     display: flexbox;
     align-items:center;
     justify-content: center;
