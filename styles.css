@@ -5,12 +5,13 @@
   }
   body{
     background-image: url("/wp1898158-taxi-wallpapers.jpg");
-    height: auto;
+    height:100%;
     width: 100%;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    
+    background-attachment: fixed;
+
 }
   
   .container {
@@ -85,21 +86,22 @@
     /* margin-bottom: 20px; */
   }
   .form-control:focus {
-    border: 4px solid #d8b907;
+    border: 3px solid #d8b907;
 }
 .form-control {
     overflow: hidden;
     width: 100%;
     background: transparent;
-    border: 1px solid #fff;
+    border: 3px solid #fff;
     margin: 6px 0;
-    height: 5%;   
+    height: 4%;   
     border-radius: 20px;
     padding: 5%;
     box-sizing: border-box;
     outline: none;
     text-align: center;
-    color: #fff;
+    color:#d8b907;
+    font-size: 20px;
   }
   textarea{
     overflow: hidden;
@@ -119,7 +121,7 @@
   
   ::placeholder {
     color: #fff;
-    font-size: 12px;
+    font-size: 20px;
   }
   
   button {
@@ -156,8 +158,9 @@
   }
   .btn{
     box-shadow: inset 0 0 0 0 #d3da8f;
-    color: #f8f8f8;
+    color: #000000;
     background-color: black;
+    font-weight: bolder;
     margin: 1%;
     padding: 0%;
     display: flex;
@@ -178,16 +181,20 @@
     justify-content: center;
     border-radius: 20px 50px;
     font-size: 20px;
-
+    font-weight: bolder;
     transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
   }
   .btn1:hover {
     box-shadow: inset 468px 0 0 0  #d8b907;
-    color: white;
+    color: black;
+  }
+  #price-details{
+text-align: center;
   }
   #h2{
     font-size: 50px;
     padding-top: 0%;
+    padding-bottom: 1%;
   }
   .submit-btn:hover{
     background-color: #d8b907;
@@ -203,7 +210,8 @@
     font-weight:bold;
   }
   /* //////////////////////// */
-  @media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (min-device-width : 768px) {
+  /* @media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (min-device-width : 768px) { */
+    @media only screen and (max-width: 480px){
     .submit-btn2{
       padding: 4%;
       display: flex;
@@ -230,14 +238,14 @@
     .card-back 
     {
       position: absolute;
-      width: 700px;
+      width: 100%;
       height: 100%;
       opacity: 0.8;
       background-position: center;
       background-color: black;
       padding: 15%;
       padding-top: 20%;
-      display: flexbox;
+      display: inline-flexbox;
       align-items:center;
       justify-content: center;
       border: 2px solid rgb(214, 231, 61);
@@ -252,16 +260,8 @@
       padding: 15%;
       padding-top: 0%;
     }
-    .card h2 {
-      font-weight: normal;
-      font-size: 20px;
-      font-weight: bolder;
-      text-align: center;
-      color: #d8b907;
-      /* margin-bottom: 20px; */
-    }
     #h2{
-      font-size: 25px;
+      font-size: 100px;
       padding-top: 0%;
     }
     .container {
@@ -274,7 +274,7 @@
     } 
     .card {
       width: 100%;
-      height: 500px;
+      height: 100%;
       perspective: 1000px;
     }
 }

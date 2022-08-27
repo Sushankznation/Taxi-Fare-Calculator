@@ -20,8 +20,9 @@
       totalFare = (totalRoute - 20) + 10 * 2 + 10 * 5;
     }
     // let totalFare = (totalRoute*kmFare);
-    let display = document.getElementById('display').innerHTML = totalFare+" Rs.";
-    
+    // let display = document.getElementById('display').innerHTML = totalFare+" Rs." <br> "Hello";
+    let display = document.getElementById('display').innerHTML = `${totalFare} Rs.<br>`
+     document.getElementById('price-details').innerHTML = `Rs. 5 per/km for first 10KM, Rs. 2 per/km for first 20KM and Rs. 1 per/km after that.`
   
   }
   // API-HERO
