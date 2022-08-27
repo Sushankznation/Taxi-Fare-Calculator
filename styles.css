@@ -79,7 +79,8 @@
   
   .card h2 {
     font-weight: normal;
-    font-size: 40px;
+    font-size: 30px;
+    padding-top: 2%;
     font-weight: bolder;
     text-align: center;
     color: #d8b907;
