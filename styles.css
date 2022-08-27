@@ -9,6 +9,7 @@
     width: 100%;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     
 }
   
@@ -215,7 +216,8 @@
     width: 400px;
     height: 500px;
     opacity: 0.8;
-    background-position: center;
+
+    background-position:center;
     background-color: black;
     padding: 20%;
     padding-top: 0%;
@@ -226,7 +228,19 @@
     border-radius: 50px 20px;
     box-sizing: border-box;
     backface-visibility: hidden;
-    
   }
+  .card-front{
+    padding: 20%;
+    padding-top: 20%;
+  }
+  body{
+    background-image: url("/wp1898158-taxi-wallpapers.jpg");
+    height: 100%;
+    width: auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
 }
  
