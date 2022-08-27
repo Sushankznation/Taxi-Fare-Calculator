@@ -230,8 +230,13 @@
     backface-visibility: hidden;
   }
   .card-front{
-    padding: 20%;
+    /* padding: 20%; */
     padding-top: 20%;
+  }
+  .card-back {
+    transform: rotateY(180deg);
+    padding: 15%;
+    padding-top: 0%;
   }
   body{
     background-image: url("/wp1898158-taxi-wallpapers.jpg");
