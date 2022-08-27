@@ -203,48 +203,75 @@
     font-weight:bold;
   }
   /* //////////////////////// */
-  @media screen and (max-width: 991px) {
-    .container
-    {
+  @media only screen 
+  and (min-device-width: 400px) 
+  and (max-device-width: 700px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    .card {
+      width: 50%;
+      height: 500px;
+      perspective: 1000px;
+    }
+    .submit-btn2{
+      padding: 4%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #d8b907;
+      font-size: 150%;
+    }
+    .submit-btn2:hover{
+      background-color:black;
+      transition: 2s;
+    }
+    
+    .inner-box {
+      position: relative;
       width: 100%;
-    height: 100%;
-  }
-  .card-front,
-  .card-back 
-  {
-    position: absolute;
-    width: 400px;
-    height: 500px;
-    opacity: 0.8;
-
-    background-position:center;
-    background-color: black;
-    padding: 20%;
-    padding-top: 0%;
-    display: flexbox;
-    align-items:center;
-    justify-content: center;
-    border: 2px solid rgb(214, 231, 61);
-    border-radius: 50px 20px;
-    box-sizing: border-box;
-    backface-visibility: hidden;
-  }
-  .card-front{
-    padding: 20%;
-    padding-top: 20%;
-  }
-  .card-back {
-    transform: rotateY(180deg);
-    padding: 20%;
-    padding-top: 0%;
-  }
-  body{
-    background-image: url("/wp1898158-taxi-wallpapers.jpg");
-    height: 90vh;
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
+      height: 100%;
+      /* transform: rotateY(-180deg); */
+      transform-style: preserve-3d;
+      transition: transform 1s;
+    }
+    
+    .card-front,
+    .card-back 
+    {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0.8;
+      background-position: center;
+      background-color: black;
+      padding: 15%;
+      padding-top: 20%;
+      display: flexbox;
+      align-items:center;
+      justify-content: center;
+      border: 2px solid rgb(214, 231, 61);
+      border-radius: 50px 20px;
+      box-sizing: border-box;
+      backface-visibility: hidden;
+      
+    }
+    
+    .card-back {
+      transform: rotateY(180deg);
+      padding: 15%;
+      padding-top: 0%;
+    }
+    .card h2 {
+      font-weight: normal;
+      font-size: 20px;
+      font-weight: bolder;
+      text-align: center;
+      color: #d8b907;
+      /* margin-bottom: 20px; */
+    }
+    #h2{
+      font-size: 25px;
+      padding-top: 0%;
+    }
 }
  
