@@ -259,11 +259,12 @@ text-align: center;
     .card-back {
       transform: rotateY(180deg);
       padding: 15%;
-      padding-top: 0%;
+      padding-top: 25%;
+      font-size: unset;
     }
     #h2{
-      font-size: 100px;
-      padding-top: 0%;
+font-size: 25px;
+    padding: 5%;
     }
     .container {
       width: 100%;
