@@ -279,5 +279,8 @@ font-size: 25px;
       height: 100%;
       perspective: 1000px;
     }
+        .card-front{
+        padding-top: 50%;
+        }
 }
  
