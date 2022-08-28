@@ -64,7 +64,7 @@
     display: flexbox;
     align-items:center;
     justify-content: center;
-    border: 2px solid rgb(214, 231, 61);
+    border: 8px solid rgb(214, 231, 61);
     border-radius: 50px 20px;
     box-sizing: border-box;
     backface-visibility: hidden;
@@ -249,7 +249,7 @@ text-align: center;
       display: inline-flexbox;
       align-items:center;
       justify-content: center;
-      border: 2px solid rgb(214, 231, 61);
+      border: 5px solid rgb(214, 231, 61);
       border-radius: 50px 20px;
       box-sizing: border-box;
       backface-visibility: hidden;
