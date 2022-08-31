@@ -263,7 +263,7 @@ text-align: center;
   #price{
     padding-top: 1%;
     text-align: center;
-  }
+  } 
   #display{
     color: #d8b907;
     font-size: 25px;
@@ -343,5 +343,21 @@ font-size: 25px;
         .card-front{
         padding-top: 60%;
         }
+        .form-control {
+          overflow: hidden;
+          width: 100%;
+          background: transparent;
+          border: 3px solid #fff;
+          margin: 15px 0;
+          height: 4%;   
+          border-radius: 20px;
+          padding: 10%;
+          box-sizing: border-box;
+          outline: none;
+          text-align: center;
+          color:#d8b907;
+          font-size: 20px;
+        }
 }
+
  
