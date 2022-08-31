@@ -10,15 +10,16 @@
 ------------
 
 ## Screeenshots 📇
-![image](https://user-images.githubusercontent.com/102636327/187023648-6183cf97-fb83-4e12-99d1-4461c4a3511e.png)
-![image](https://user-images.githubusercontent.com/102636327/187023692-82c73009-282c-4dcb-bbc4-03eeb3d528a3.png)
+![image](https://user-images.githubusercontent.com/102636327/187596277-3cee42c3-74a9-4c95-9060-6bef63e6f1e2.png)
+
+![image](https://user-images.githubusercontent.com/102636327/187596316-2472bc02-c5e5-431c-b2b6-921af7f6aa90.png)
 
 ------------
 
 
 
 ### Video View 🎥
-- https://www.loom.com/share/cdeadc517b944e38b0aa6f25614df8b1
+- https://www.loom.com/share/18e5747c30ff4a199f1119f8164c98f2
 
 ------------
 
