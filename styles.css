@@ -71,7 +71,7 @@
     border-radius: 50px 20px;
     box-sizing: border-box;
     backface-visibility: hidden;
-      overflow-y:hidden;
+      overflow-x:hidden;
   }
   
   .card-back {
