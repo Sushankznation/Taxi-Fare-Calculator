@@ -12,6 +12,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+      overflow:hidden;
 } 
   .container {
     width: 100%;
