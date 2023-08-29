@@ -55,6 +55,7 @@ function openRegister() {
       var to_address = to_place.formatted_address;
       $("#destination").val(to_address);
     });
+}
   // Calculate distance and display results
   function calculateDistance() {
     var origin = $("#origin").val();
