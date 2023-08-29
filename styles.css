@@ -1,48 +1,312 @@
 * {
-    margin: 0;
-    padding: 0;
-    font-family: cursive;
-/*     overflow-x:hidden; */
+  margin: 0;
+  padding: 0;
+  font-family: cursive;
+}
+
+body {
+  background-image: url("./assets/wp1898158-taxi-wallpapers.jpg");
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: 50%;
+  height: 600px;
+  perspective: 1000px;
+}
+
+.submit-btn2 {
+  padding: 4%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #d8b907;
+  font-size: 150%;
+  color: black;
+  font-weight: 900;
+}
+
+.submit-btn2:hover {
+  transition: 2s;
+  box-shadow: 0 0 11px #d8b907;
+}
+
+.inner-box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* transform: rotateY(-180deg); */
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  box-shadow: 0 0 11px #d8b907;
+  background-position: center;
+  background-color: black;
+  padding: 15%;
+  padding-top: 20%;
+  display: flexbox;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid rgb(214, 231, 61);
+  border-style: double;
+  border-radius: 50px 20px;
+  box-sizing: border-box;
+  backface-visibility: hidden;
+  /*       overflow-x:hidden; */
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  padding: 15%;
+  padding-top: 0%;
+}
+
+.card h2 {
+  font-weight: normal;
+  font-size: 30px;
+  padding-top: 2%;
+  font-weight: bolder;
+  text-align: center;
+  color: #d8b907;
+  /* margin-bottom: 20px; */
+}
+
+.form-control {
+  overflow: hidden;
+  width: 100%;
+  background: transparent;
+  border: 3px solid #fff;
+  margin: 15px 0;
+  height: 4%;
+  border-radius: 20px;
+  padding: 5%;
+  box-sizing: border-box;
+  outline: none;
+  text-align: center;
+  color: #d8b907;
+  font-size: 20px;
+}
+
+.form-control:focus {
+  border: 3px solid #d8b907;
+  box-shadow: 0 0 11px #d8b907;
+}
+
+textarea {
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  height: 10%;
+  /* box-sizing: border-box; */
+  outline: none;
+  color: #d8b907;
+  text-align: center;
+  margin: auto;
+  width: 50%;
+  display: table;
+  font-weight: 900;
+  font-size: x-large;
+}
+
+::placeholder {
+  color: #fff;
+  font-size: 20px;
+}
+
+button {
+  width: 100%;
+  background: transparent;
+  border: 1px solid #fff;
+  /* margin: 35px 0 10px; */
+  margin: 2%;
+  height: 10%;
+  font-size: 12px;
+  border-radius: 20px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 900;
+}
+
+.submit-btn {
+  position: relative;
+  box-shadow: 0 0 11px #d8b907;
+}
+
+.btn .card {
+  margin-top: 70px;
+  box-shadow: 0 0 11px #d8b907;
+}
+
+.card a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.btn {
+  color: #000000;
+  background-color: black;
+  font-weight: bolder;
+  margin: 1%;
+  padding: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  background-color: #d8b907;
+}
+
+.glow-on-hover {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px 50px;
+  font-size: 20px;
+  font-weight: bolder;
+  border-radius: 20px 50px;
+  outline: none;
+  color: #fff;
+  border: 1px solid #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+
+}
+
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 20px 50px;
+}
+
+.glow-on-hover:active {
+  color: #000
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 20px 50px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
   }
-  body{
-    background-image: url("/wp1898158-taxi-wallpapers.jpg");
-    height:100%;
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-      overflow:hidden;
-} 
-  .container {
-    width: 100%;
-    height: 100%;
-     color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+  50% {
+    background-position: 400% 0;
   }
-  
-  .card {
-    width: 50%;
-    height: 600px;
-    perspective: 1000px;
+
+  100% {
+    background-position: 0 0;
   }
-  .submit-btn2{
+}
+
+/* /////////////////// */
+.btn:hover {
+  color: black;
+  box-shadow: 0 0 11px #d8b907;
+}
+
+#price-details {
+  text-align: center;
+}
+
+#h2 {
+  font-size: 50px;
+  padding-top: 0%;
+  padding-bottom: 1%;
+}
+
+.submit-btn:hover {
+  background-color: #d8b907;
+}
+
+#price {
+  padding-top: 1%;
+  text-align: center;
+}
+
+#display {
+  color: #d8b907;
+  font-size: 25px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* //////////////////////// */
+/* @media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (min-device-width : 768px) { */
+@media only screen and (max-width: 480px) {
+  .submit-btn2 {
     padding: 4%;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #d8b907;
     font-size: 150%;
-    color: black;
-    font-weight: 900;
   }
-  .submit-btn2:hover{
+
+  .submit-btn2:hover {
+    background-color: black;
     transition: 2s;
-    box-shadow: 0 0 11px #d8b907; 
   }
-  
+
   .inner-box {
     position: relative;
     width: 100%;
@@ -51,316 +315,72 @@
     transform-style: preserve-3d;
     transition: transform 1s;
   }
-  
+
   .card-front,
-  .card-back 
-  {
+  .card-back {
     position: absolute;
     width: 100%;
     height: 100%;
     opacity: 0.8;
-    box-shadow: 0 0 11px #d8b907; 
     background-position: center;
     background-color: black;
     padding: 15%;
     padding-top: 20%;
-    display: flexbox;
-    align-items:center;
+    display: inline-flexbox;
+    align-items: center;
     justify-content: center;
     border: 5px solid rgb(214, 231, 61);
-      border-style: double;
     border-radius: 50px 20px;
+    border-style: double;
     box-sizing: border-box;
     backface-visibility: hidden;
-/*       overflow-x:hidden; */
+
   }
-  
+
   .card-back {
     transform: rotateY(180deg);
     padding: 15%;
-    padding-top: 0%;
+    padding-top: 25%;
+    font-size: unset;
   }
-  
-  .card h2 {
-    font-weight: normal;
-    font-size: 30px;
-    padding-top: 2%;
-    font-weight: bolder;
-    text-align: center;
-    color: #d8b907;
-    /* margin-bottom: 20px; */
+
+  #h2 {
+    font-size: 25px;
+    padding: 5%;
   }
-  
-.form-control {
+
+  .container {
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card {
+    width: 100%;
+    height: 100%;
+    perspective: 1000px;
+  }
+
+  .card-front {
+    padding-top: 60%;
+  }
+
+  .form-control {
     overflow: hidden;
     width: 100%;
     background: transparent;
     border: 3px solid #fff;
     margin: 15px 0;
-    height: 4%;   
+    height: 4%;
     border-radius: 20px;
-    padding: 5%;
+    padding: 10%;
     box-sizing: border-box;
     outline: none;
     text-align: center;
-    color:#d8b907;
-    font-size: 20px;
-  }
-  .form-control:focus {
-    border: 3px solid #d8b907;
-    box-shadow: 0 0 11px #d8b907; 
-}
-  textarea{
-    overflow: hidden;
-    border: none;
-    background: transparent;
-    height: 10%;
-    /* box-sizing: border-box; */
-    outline: none;
     color: #d8b907;
-  text-align: center;
-  margin: auto;
-  width: 50%;
-  display: table;
-  font-weight:900;
-  font-size:x-large;
-  }
-  
-  ::placeholder {
-    color: #fff;
     font-size: 20px;
   }
-  
-  button {
-    width: 100%;
-    background: transparent;
-    border: 1px solid #fff;
-    /* margin: 35px 0 10px; */
-    margin: 2%;
-    height: 10%;
-    font-size: 12px;
-    border-radius: 20px;
-    padding: 0 10px;
-    box-sizing: border-box;
-    outline: none;
-    color: #fff; 
-    cursor: pointer;
-    font-weight: 900;
-  }
-  
-  .submit-btn {
-    position: relative;
-    box-shadow: 0 0 11px #d8b907; 
-  }
-
-  .btn .card {
-    margin-top: 70px;
-    box-shadow: 0 0 11px #d8b907; 
-  }
-  
-  .card a {
-    color: #fff;
-    text-decoration: none;
-    display: block;
-    text-align: center;
-    font-size: 13px;
-    margin-top: 8px;
-  }
-  .btn{
-    /* box-shadow: inset 0 0 0 0 #d3da8f; */
-    /* box-shadow: 0 0 11px #d8b907;  */
-    color: #000000;
-    background-color: black;
-    font-weight: bolder;
-    margin: 1%;
-    padding: 0%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    background-color: #d8b907;
-    /* transition: color .3s ease-in-out, box-shadow .3s ease-in-out; */
-  }
-  .glow-on-hover {
-    /* /* width: 220px; */
-    height: 50px; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 20px 50px;
-    font-size: 20px;
-    font-weight: bolder;
-    border-radius: 20px 50px;
-    outline: none;
-    color: #fff;
-    border: 1px solid #fff;
-    background: #111;
-    cursor: pointer;
-    position: relative;
-    z-index: 0;
-
 }
-
-.glow-on-hover:before {
-    content: '';
-    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-    position: absolute;
-    top: -2px;
-    left:-2px;
-    background-size: 400%;
-    z-index: -1;
-    filter: blur(5px);
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    animation: glowing 20s linear infinite;
-    opacity: 0;
-    transition: opacity .3s ease-in-out;
-    border-radius: 20px 50px;
-}
-
-.glow-on-hover:active {
-    color: #000
-}
-
-.glow-on-hover:active:after {
-    background: transparent;
-}
-
-.glow-on-hover:hover:before {
-    opacity: 1;
-}
-
-.glow-on-hover:after {
-    z-index: -1;
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #111;
-    left: 0;
-    top: 0;
-    border-radius: 20px 50px;
-}
-
-@keyframes glowing {
-    0% { background-position: 0 0; }
-    50% { background-position: 400% 0; }
-    100% { background-position: 0 0; }
-}
-  /* /////////////////// */
-  .btn:hover{
-    color: black;
-    box-shadow: 0 0 11px #d8b907; 
-  }
-  #price-details{
-text-align: center;
-  }
-  #h2{
-    font-size: 50px;
-    padding-top: 0%;
-    padding-bottom: 1%;
-  }
-  .submit-btn:hover{
-    background-color: #d8b907;
-  }
-  #price{
-    padding-top: 1%;
-    text-align: center;
-  } 
-  #display{
-    color: #d8b907;
-    font-size: 25px;
-    text-align: center;
-    font-weight:bold;
-  }
-  /* //////////////////////// */
-  /* @media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (min-device-width : 768px) { */
-    @media only screen and (max-width: 480px){
-    .submit-btn2{
-      padding: 4%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: #d8b907;
-      font-size: 150%;
-    }
-    .submit-btn2:hover{
-      background-color:black;
-      transition: 2s;
-    }
-    
-    .inner-box {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      /* transform: rotateY(-180deg); */
-      transform-style: preserve-3d;
-      transition: transform 1s;
-    }
-    
-    .card-front,
-    .card-back 
-    {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      opacity: 0.8;
-      background-position: center;
-      background-color: black;
-      padding: 15%;
-      padding-top: 20%;
-      display: inline-flexbox;
-      align-items:center;
-      justify-content: center;
-      border: 5px solid rgb(214, 231, 61);
-      border-radius: 50px 20px;
-        border-style: double;
-      box-sizing: border-box;
-      backface-visibility: hidden;
-      
-    }
-    
-    .card-back {
-      transform: rotateY(180deg);
-      padding: 15%;
-      padding-top: 25%;
-      font-size: unset;
-    }
-    #h2{
-font-size: 25px;
-    padding: 5%;
-    }
-    .container {
-      width: 100%;
-      height: 100vh;
-       color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    } 
-    .card {
-      width: 100%;
-      height: 100%;
-      perspective: 1000px;
-    }
-        .card-front{
-        padding-top: 60%;
-        }
-        .form-control {
-          overflow: hidden;
-          width: 100%;
-          background: transparent;
-          border: 3px solid #fff;
-          margin: 15px 0;
-          height: 4%;   
-          border-radius: 20px;
-          padding: 10%;
-          box-sizing: border-box;
-          outline: none;
-          text-align: center;
-          color:#d8b907;
-          font-size: 20px;
-        }
-}
-/* //done */
- 

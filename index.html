@@ -1,87 +1,73 @@
 <html>
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="stylesheet" href="/src/styles.css" />
-      <title>Calculate-Taxi-Fare</title>
-      <link rel = "icon" href = 
-"https://www.pngall.com/wp-content/uploads/13/Taxi-Logo-PNG.png" type = "image/x-icon">
-      <link rel="stylesheet" href="styles.css">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-      <script
-        defer
-        src="https://maps.googleapis.com/maps/api/js?libraries=places&language=en&key= AIzaSyD51OcSUK4f64fv3yoiVhaMECtf1L6gItU"
-        type="text/javascript"
-      ></script>
-    </head>
-    </head>
-    <body>
-      <div class="container">
-        <div class="card">
-          <div class="inner-box" id="card">
-            <div class="card-front">
-              <h2 id="h2">Get Your Taxi Fare now!</h2>
-              <button type="button" class="glow-on-hover" onclick="openRegister()">
-                Calculate Now
-              </button>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/src/styles.css" />
+  <title>Calculate-Taxi-Fare</title>
+  <link rel="icon" href="https://www.pngall.com/wp-content/uploads/13/Taxi-Logo-PNG.png" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?libraries=places&language=en&key= AIzaSyD51OcSUK4f64fv3yoiVhaMECtf1L6gItU"
+    type="text/javascript"></script>
+</head>
+</head>
+
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="inner-box" id="card">
+        <div class="card-front">
+          <h2 id="h2">Get Your Taxi Fare now!</h2>
+          <button type="button" class="glow-on-hover" onclick="openRegister()">
+            Calculate Now
+          </button>
+        </div>
+        <div class="card-back">
+          <h2>Enter Details </h2>
+
+          <!-- <div class="container"> -->
+          <div class="row">
+            <div class="jumbotron">
+              <!-- <h1>Calculate the Distance Between two Addresses demo</h1> -->
             </div>
-            <div class="card-back">
-              <h2>Enter Details </h2>
-             
-              <!-- <div class="container"> -->
-                <div class="row">
-                  <div class="jumbotron">
-                    <!-- <h1>Calculate the Distance Between two Addresses demo</h1> -->
-                  </div>
-                    <form id="distance_form">
-                      <div class="form-group">
-                        <label> Enter Origin </label>
-                        <input
-                          class="form-control"
-                          id="from_places"
-                          required
-                          placeholder="Enter a location"
-                        />
-                        <input id="origin" name="origin" required type="hidden" />
-                      </div>
-           
-                      <div class="form-group">
-                        <label> Enter Destination </label>
-                        <input
-                          class="form-control"
-                          id="to_places"
-                            required
-                          placeholder="Enter a location"
-                        />
-                        <input
-                          id="destination"
-                          name="destination"
-                          required
-                          type="hidden"
-                        />
-                      </div>
-                      <button class="btn btn-primary" type="submit" value="Calculate"> Calculate Total Distance</button> 
-                    </form>
-                    <label for="kilo">Total Distance in KM:</label>
-                        <textarea name="textare" id="kilo" cols="10" class="
-                        list-group-item rows="5" disabled> </textarea>
-          
-                      </ul>
-                      <button type="submit" class="submit-btn2" onclick="calculate()">Check Fare</button>
-                
-                      <div id="display"> </div>
-                      <div id="price-details"></div>
-                    </div>
-               
-                <!-- <div id="price"> </div>   -->
-              </div> 
-            </div>
+            <form id="distance_form">
+              <div class="form-group">
+                <label> Enter Origin </label>
+                <input class="form-control" id="from_places" required placeholder="Enter a location" />
+                <input id="origin" name="origin" required type="hidden" />
+              </div>
+
+              <div class="form-group">
+                <label> Enter Destination </label>
+                <input class="form-control" id="to_places" required placeholder="Enter a location" />
+                <input id="destination" name="destination" required type="hidden" />
+              </div>
+              <button class="btn btn-primary" type="submit" value="Calculate"> Calculate Total Distance</button>
+            </form>
+            <label for="kilo">Total Distance in KM:</label>
+            <textarea name="textare" id="kilo" cols="10" class="
+                        list-group-item rows=" 5" disabled> </textarea>
+
+            </ul>
+            <button type="submit" class="submit-btn2" onclick="calculate()">Check Fare</button>
+
+            <div id="display"> </div>
+            <div id="price-details"></div>
           </div>
+
+          <!-- <div id="price"> </div>   -->
         </div>
       </div>
-      <script src="/index.js"></script>
-    </body>
-  </html>
+    </div>
+  </div>
+  </div>
+  <script src="/new.js"></script>
+</body>
+
+</html>
+
 </html>
